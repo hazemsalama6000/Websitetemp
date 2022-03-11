@@ -2,8 +2,9 @@
 
     <mat-sidenav #side>
 
-      <SideMenu-C></SideMenu-C>
-      
+      <SideMenu-C [options]="options" 
+      [menus]="menus"></SideMenu-C>
+     
     </mat-sidenav>
     
 
@@ -11,8 +12,15 @@
 
       <Header-C [Sidenav]="side"></Header-C>
       
-      <router-outlet></router-outlet>
 
+
+      <router-outlet>
+        <div style="height: 580px;">
+
+        </div>
+      </router-outlet>
+
+      
     </mat-sidenav-content>
 
 </mat-sidenav-container>
