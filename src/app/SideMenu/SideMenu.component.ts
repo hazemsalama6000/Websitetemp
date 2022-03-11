@@ -2,7 +2,9 @@ import { Component } from "@angular/core";
 
 @Component({
     selector:'SideMenu-C',
-    template:`ssss`
+    template:`
+    
+    `
 })
 
 export class SideMenuComponent{
