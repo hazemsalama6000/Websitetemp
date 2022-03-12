@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './SharedModule/SharedModule.module';
 import { HeaderComponent } from './Header/Header.component';
 import { SideMenuComponent } from './SideMenu/SideMenu.component';
+import { LoggingService } from './Services/Logging.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { SideMenuComponent } from './SideMenu/SideMenu.component';
     BrowserAnimationsModule,
     SharedModule
   ],
-  providers: [],
+  providers: [LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
