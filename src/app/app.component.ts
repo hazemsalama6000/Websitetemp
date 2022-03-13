@@ -6,6 +6,7 @@ import { Menu } from './Models/AccordionModels/Menu';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
+  
 })
 export class AppComponent {
   title = 'newsEgypt';

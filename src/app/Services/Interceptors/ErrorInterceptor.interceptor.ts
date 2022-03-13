@@ -18,7 +18,7 @@ export class ErrorInterceptor implements HttpInterceptor {
       
         return next.handle(request).pipe(
             catchError((requestError) => {
-                if (requestError.status !== 401) {
+                if (requestError.status == 401) {
                     const { error } = requestError;
                     this.Logging.LogRequestError({
                         severity: 'error',

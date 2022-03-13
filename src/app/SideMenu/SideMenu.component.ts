@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { ChangeDetectionStrategy, Component, Input, OnInit } from "@angular/core";
 import { Config, Menu } from "../Models/AccordionModels";
 import { ISource } from "../Models/NewsSources";
 import { SideMenuService } from "../Services/SideMenu.service";
