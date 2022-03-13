@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from "@angular/core";
 import { Config, Menu } from "../Models/AccordionModels";
 import { ISource } from "../Models/NewsSources";
-import { SideMenuService } from "../Services/SideMenu.service";
+import { NewsSourceService } from "../Services/NewsSource.service";
 
 @Component({
 	selector: 'SideMenu-C',
@@ -50,12 +50,12 @@ export class SideMenuComponent implements OnInit {
 
 	config: Config;
 
-	constructor(private sideMenuService: SideMenuService) { }
+	constructor(private NewsSourceService: NewsSourceService) { }
 
 	ngOnInit() {
 		this.config = this.mergeConfig(this.options);
 
-		this.sideMenuService.getMenuItems().subscribe(
+		this.NewsSourceService.getMenuItems().subscribe(
 			(data: any) => {
 				this.NewsSources = data['sources'];
 				let MenuObject: Menu = { name: 'Sources', active: true, iconClass: '', submenu: [] };

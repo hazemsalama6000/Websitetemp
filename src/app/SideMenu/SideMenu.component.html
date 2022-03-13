@@ -1,15 +1,13 @@
-<ul id="accordion" class="accordion" >
+<ul id="accordion" class="accordion">
 	<li *ngFor="let menu of menus; let i = index" [class.active]="menu.active">
-	  <div class="menu" (click)="toggle(i)">
-		<i [class]="menu.iconClass"></i>
-		<strong><mat-icon style="margin-top: 4px;">expand_circle_down</mat-icon>{{ menu.name }}</strong>
-        
-    </div>
-	  <ul class="submenu" #submenu 
-		[style.height.px]="menu.active ? submenu.scrollHeight : 0">
-		<li *ngFor="let submenu of menu.submenu">
-		  <a [href]="submenu.url">{{ submenu.name }}</a>
-		</li>
-	  </ul>
+
+		<div class="menu" (click)="toggle(i)">
+				{{ menu.name }}
+		</div>
+		<ul class="submenu" #submenu [style.height.px]="menu.active ? submenu.scrollHeight : 0">
+			<li *ngFor="let submenu of menu.submenu">
+				<a [href]="submenu.url">{{ submenu.name }}</a>
+			</li>
+		</ul>
 	</li>
-  </ul>
+</ul>
