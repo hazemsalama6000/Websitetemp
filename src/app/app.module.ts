@@ -4,22 +4,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from './SharedModule/SharedModule.module';
-import { HeaderComponent } from './Header/Header.component';
-import { SideMenuComponent } from './SideMenu/SideMenu.component';
+import { SharedModule } from './Modules/SharedModule/SharedModule.module';
+import { HeaderComponent } from './Components/Header/Header.component';
+import { SideMenuComponent } from './Components/SideMenu/SideMenu.component';
 import { LoggingService } from './Services/Logging.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './Services/Interceptors/AuthInterceptor.interceptor';
 import { CachingInterceptor } from './Services/Interceptors/CachingInterceptor.interceptor';
 import { ErrorInterceptor } from './Services/Interceptors/ErrorInterceptor.interceptor';
 import { LoggingInterceptor } from './Services/Interceptors/LoggingInterceptor.interceptor';
+import { NewsComponent } from './Components/News/News.component';
+import { NewsCardComponent } from './Components/News/NewsCard/NewsCard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    NewsComponent,
+    NewsCardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from "@angular/core";
-import { Config, Menu } from "../Models/AccordionModels";
-import { ISource } from "../Models/NewsSources";
-import { NewsSourceService } from "../Services/NewsSource.service";
+import { Config, Menu } from "../../Models/AccordionModels";
+import { ISource } from "../../Models/NewsSources";
+import { NewsSourceService } from "../../Services/NewsSource.service";
 
 @Component({
 	selector: 'SideMenu-C',
@@ -59,7 +59,7 @@ export class SideMenuComponent implements OnInit {
 			(data: any) => {
 				this.NewsSources = data['sources'];
 				let MenuObject: Menu = { name: 'Sources', active: true, iconClass: '', submenu: [] };
-				MenuObject.submenu = this.NewsSources.map(s => ({ Icon: s.url, name: s.name, url: s.url }));
+				MenuObject.submenu = this.NewsSources.map(s => ({id:s.id, Icon: s.url, name: s.name, url: s.url }));
 				this.menus.push(MenuObject);
 			}
 		);

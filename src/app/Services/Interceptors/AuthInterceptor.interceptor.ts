@@ -24,7 +24,7 @@ constructor(){}
         return request.clone({
             setHeaders: {
                 'X-Api-Key': environment.ApiKey
-            }
+                        }
         });
     }
 
