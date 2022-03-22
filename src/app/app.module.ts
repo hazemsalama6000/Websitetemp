@@ -15,6 +15,7 @@ import { ErrorInterceptor } from './Services/Interceptors/ErrorInterceptor.inter
 import { LoggingInterceptor } from './Services/Interceptors/LoggingInterceptor.interceptor';
 import { NewsComponent } from './Components/News/News.component';
 import { NewsCardComponent } from './Components/News/NewsCard/NewsCard.component';
+import { MultilevelMenuService, NgMaterialMultilevelMenuModule,ɵb } from 'ng-material-multilevel-menu';
 
 
 @NgModule({
@@ -29,10 +30,11 @@ import { NewsCardComponent } from './Components/News/NewsCard/NewsCard.component
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    NgMaterialMultilevelMenuModule
   ],
   providers: [
-    LoggingService,
+    LoggingService,ɵb ,MultilevelMenuService,
   {
     provide:HTTP_INTERCEPTORS,
     useClass:AuthInterceptor,

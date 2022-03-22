@@ -1,15 +1,8 @@
-<ul id="accordion" class="accordion">
-	<li *ngFor="let menu of menus; let i = index" [class.active]="menu.active">
 
-		<div class="menu" (click)="toggle(i)">
-				<h1 style="display: inline;">{{ menu.name }}</h1>
-				<mat-icon style="font-size: 20px;margin-left: 5px;" aria-hidden="false" aria-label="arrow_circle_down">arrow_circle_down</mat-icon>
-				
-		</div>
-		<ul class="submenu" #submenu [style.height.px]="menu.active ? submenu.scrollHeight : 0">
-			<li *ngFor="let submenu of menu.submenu">
-				<a [routerLink]="['News/',submenu.id,submenu.name]">{{ submenu.name }}</a>
-			</li>
-		</ul>
-	</li>
-</ul>
+<ng-material-multilevel-menu  
+    [configuration]='config' 
+    [items]='appitems'
+    (selectedItem)="selectedItem($event)" 
+    (menuIsReady)="menuIsReady($event)" 
+    (selectedLabel)="selectedLabel($event)">
+</ng-material-multilevel-menu>

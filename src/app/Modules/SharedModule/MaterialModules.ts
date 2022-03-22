@@ -64,5 +64,4 @@ export const MaterialsModules=[
     MatTableModule,
     MatSortModule,
     MatPaginatorModule
-
 ];

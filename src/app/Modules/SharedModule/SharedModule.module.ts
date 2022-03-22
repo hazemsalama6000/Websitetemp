@@ -1,15 +1,18 @@
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
+import { ɵb } from "ng-material-multilevel-menu";
 import { MaterialsModules } from "./MaterialModules";
 
 @NgModule({
-imports:[MaterialsModules,
-HttpClientModule
+imports:[
+    MaterialsModules,
+    HttpClientModule
 ],
-exports:[MaterialsModules]
+exports:[MaterialsModules],
 })
 
-export class SharedModule{
+export class SharedModule
+{
 
 
 }
