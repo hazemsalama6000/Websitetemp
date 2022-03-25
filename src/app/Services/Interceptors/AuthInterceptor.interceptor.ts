@@ -23,7 +23,7 @@ constructor(){}
     AddAuthToHeader(request: HttpRequest<any>) {
         return request.clone({
             setHeaders: {
-                'X-Api-Key': environment.ApiKey
+                // 'X-Api-Key': environment.ApiKey
                         }
         });
     }

@@ -1,30 +1,29 @@
-import { Injectable } from "@angular/core";
-import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from "@angular/router";
-import { map, Observable } from "rxjs";
-import { Article } from "src/app/Models/Article";
-import { NewsService } from "../News.service";
+// import { Injectable } from "@angular/core";
+// import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from "@angular/router";
+// import { map, Observable } from "rxjs";
+// import { Article } from "src/app/Models/Article";
 
-@Injectable({
-    providedIn: 'root'
-})
+// @Injectable({
+//     providedIn: 'root'
+// })
 
-export class NewsResolver implements Resolve<any>{
+// export class NewsResolver implements Resolve<any>{
     
-    constructor(private NewsService: NewsService) {}
+//     constructor(private NewsService: NewsService) {}
     
-    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
+//     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any {
 
-        let SourceId = route.params['SourceId']
-        let SourceName=route.params['SourceName'];
+//         let SourceId = route.params['SourceId']
+//         let SourceName=route.params['SourceName'];
 
-        return this.NewsService.getNewsOfSpecificSource(SourceId).pipe(
-            map(
-                (data:any) => {
-                    return {SourceName:SourceName,articles:data['articles']};
-                              }
-               )
-                );
+//         return this.NewsService.getNewsOfSpecificSource(SourceId).pipe(
+//             map(
+//                 (data:any) => {
+//                     return {SourceName:SourceName,articles:data['articles']};
+//                               }
+//                )
+//                 );
 
-    }
+//     }
 
-}
+// }
