@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolBar } from './Components/ToolBar/ToolBar.component';
 import { HaederComponent } from './Components/Header/Header.component';
 import { SearchComponent } from './Components/SearchBar/Search.component';
+import { ListOfCardsComponent } from './Components/ListCards/ListOfCards.component';
+import { FundamentalsComponent } from './Components/Fundamentals/Fundamental.component';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { SearchComponent } from './Components/SearchBar/Search.component';
     AppComponent,
     ToolBar,
     HaederComponent,
-    SearchComponent
+    SearchComponent,
+    ListOfCardsComponent,
+    FundamentalsComponent
   ],
   imports: [
     BrowserModule,
