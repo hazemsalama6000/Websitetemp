@@ -63,4 +63,4 @@ import { FundamentalsComponent } from './Components/Fundamentals/Fundamental.com
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }//s
+export class AppModule { }
