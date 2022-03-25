@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "newsEgypt": {
+    "Doc": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "newsEgypt:build:production"
+              "browserTarget": "Doc:build:production"
             },
             "development": {
-              "browserTarget": "newsEgypt:build:development"
+              "browserTarget": "Doc:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "newsEgypt:build"
+            "browserTarget": "Doc:build"
           }
         },
         "test": {
@@ -114,5 +114,5 @@
       }
     }
   },
-  "defaultProject": "newsEgypt"
+  "defaultProject": "Doc"
 }
