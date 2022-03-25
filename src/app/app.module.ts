@@ -14,12 +14,16 @@ import { LoggingInterceptor } from './Services/Interceptors/LoggingInterceptor.i
 import { MultilevelMenuService, NgMaterialMultilevelMenuModule, ɵb } from 'ng-material-multilevel-menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToolBar } from './Components/ToolBar/ToolBar.component';
+import { HaederComponent } from './Components/Header/Header.component';
+import { SearchComponent } from './Components/SearchBar/Search.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolBar
+    ToolBar,
+    HaederComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
