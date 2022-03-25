@@ -18,7 +18,7 @@ import { HaederComponent } from './Components/Header/Header.component';
 import { SearchComponent } from './Components/SearchBar/Search.component';
 import { ListOfCardsComponent } from './Components/ListCards/ListOfCards.component';
 import { FundamentalsComponent } from './Components/Fundamentals/Fundamental.component';
-
+//ss
 
 @NgModule({
   declarations: [
