@@ -18,6 +18,9 @@ import { HaederComponent } from './Components/Header/Header.component';
 import { SearchComponent } from './Components/SearchBar/Search.component';
 import { ListOfCardsComponent } from './Components/ListCards/ListOfCards.component';
 import { FundamentalsComponent } from './Components/Fundamentals/Fundamental.component';
+import { InstructorsComponent } from './Components/Instructors/Instructors.component';
+import { ContactsComponent } from './Components/Contacts/Contacts.component';
+import { FooterComponent } from './Components/Footer/Footer.component';
 
 
 @NgModule({
@@ -27,7 +30,10 @@ import { FundamentalsComponent } from './Components/Fundamentals/Fundamental.com
     HaederComponent,
     SearchComponent,
     ListOfCardsComponent,
-    FundamentalsComponent
+    FundamentalsComponent,
+    InstructorsComponent,
+    ContactsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
